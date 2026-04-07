@@ -1,0 +1,175 @@
+.about-section {
+  padding: 38px 0 28px;
+}
+
+.about-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.about-grid.is-single {
+  gap: 0;
+}
+
+.about-card {
+  border: 1px solid #dce7f9;
+  border-radius: 20px;
+  padding: 28px;
+  background: linear-gradient(180deg, #fbfdff 0%, #ffffff 100%);
+}
+
+.about-card-intro {
+  background:
+    radial-gradient(circle at right top, rgba(190, 214, 255, 0.36), transparent 42%),
+    linear-gradient(180deg, #fbfdff 0%, #ffffff 100%);
+}
+
+.about-card-intro p {
+  margin: 0;
+  color: #334155;
+  line-height: 1.8;
+  font-size: 16px;
+  white-space: pre-line;
+}
+
+.about-card-contact {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: start;
+  column-gap: 100px;
+  row-gap: 12px;
+  align-items: center;
+}
+
+.about-card-contact .section-title {
+  grid-column: 1 / -1;
+  margin-bottom: 0;
+}
+
+.about-contact-list {
+  grid-column: 1;
+  grid-row: 2;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.about-contact-list li {
+  font-size: 15px;
+  color: #334155;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.about-contact-label {
+  font-weight: 600;
+  margin-right: 6px;
+  color: #1e293b;
+}
+
+.about-contact-link {
+  color: #1550cb;
+  text-decoration: none;
+}
+
+.about-contact-link:hover {
+  color: #0f43b6;
+}
+
+.about-contact-value {
+  color: #334155;
+}
+
+.about-contact-wechat {
+  grid-column: 2;
+  grid-row: 2;
+  margin-top: 0;
+  justify-self: center;
+  text-align: center;
+}
+
+.about-contact-wechat h4 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  color: #1e293b;
+}
+
+.about-wechat-image {
+  display: block;
+  width: 112px;
+  height: 112px;
+  margin: 0 auto;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #d7e4f8;
+  background: #ffffff;
+}
+
+.about-wechat-caption {
+  margin: 8px 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #64748b;
+  white-space: normal;
+}
+
+.about-card button {
+  grid-column: 1;
+  grid-row: 3;
+  justify-self: start;
+  margin-top: 0;
+  height: 42px;
+  border: 0;
+  border-radius: 12px;
+  padding: 0 20px;
+  background: #1f64ff;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.about-card button:hover {
+  background: #0f4bd8;
+}
+
+@media (max-width: 700px) {
+  .about-card {
+    padding: 22px;
+  }
+
+  .about-card-intro p {
+    font-size: 15px;
+  }
+
+  .about-card-contact {
+    grid-template-columns: 1fr;
+    row-gap: 12px;
+  }
+
+  .about-card-contact .section-title,
+  .about-contact-list,
+  .about-contact-wechat,
+  .about-card button {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .about-contact-list li {
+    font-size: 14px;
+  }
+
+  .about-contact-wechat {
+    justify-self: start;
+    text-align: left;
+  }
+
+  .about-wechat-image {
+    width: 96px;
+    height: 96px;
+    margin: 0;
+  }
+}

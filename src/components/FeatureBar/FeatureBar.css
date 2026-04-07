@@ -1,0 +1,38 @@
+.feature-bar {
+  padding: 20px 0 14px;
+}
+
+.feature-bar-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.feature-pill {
+  border: 1px solid #d8e4f7;
+  border-radius: 999px;
+  padding: 10px 16px;
+  background: #f7faff;
+  color: #1e293b;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.feature-pill:hover {
+  border-color: #bcd1f7;
+  background: #eef5ff;
+}
+
+.feature-pill-highlight {
+  color: #0f4bd8;
+  background: #e9f1ff;
+  border-color: #c8dbff;
+}
+
+@media (max-width: 700px) {
+  .feature-pill {
+    width: 100%;
+    text-align: left;
+  }
+}

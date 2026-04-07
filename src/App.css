@@ -1,0 +1,87 @@
+:root {
+  --bg: #ffffff;
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --line: #e2e8f0;
+  --primary: #1f64ff;
+  --primary-strong: #0f4bd8;
+  --primary-soft: #edf3ff;
+  --shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+  --radius-lg: 16px;
+  --radius-md: 12px;
+  --container: 85%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  background: var(--bg);
+  color: var(--text-main);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: var(--container);
+  max-width: 1680px;
+  margin: 0 auto;
+}
+
+.section-title {
+  margin: 0 0 22px;
+  font-size: 30px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.card-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.page-intro {
+  padding: 28px 0 6px;
+}
+
+.page-intro h1 {
+  margin: 0;
+  font-size: 38px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.page-intro p {
+  margin: 10px 0 0;
+  max-width: 880px;
+  font-size: 16px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+@media (max-width: 960px) {
+  .container {
+    width: calc(100% - 28px);
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+
+  .page-intro h1 {
+    font-size: 32px;
+  }
+}
