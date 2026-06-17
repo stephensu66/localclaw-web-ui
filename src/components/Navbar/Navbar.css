@@ -131,3 +131,49 @@
     font-size: 13px;
   }
 }
+
+@media (max-width: 700px) {
+  .navbar-inner {
+    height: auto;
+    min-height: 72px;
+    flex-wrap: wrap;
+    padding: 12px 0 10px;
+    gap: 10px 12px;
+  }
+
+  .navbar-brand {
+    min-width: 0;
+  }
+
+  .navbar-nav {
+    order: 3;
+    flex: 0 0 100%;
+    gap: 18px;
+    overflow-x: auto;
+    padding: 2px 2px 8px;
+    scrollbar-width: none;
+  }
+
+  .navbar-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .navbar-lang {
+    min-width: 0;
+  }
+
+  .navbar-lang select {
+    max-width: 124px;
+  }
+}
+
+@media (max-width: 420px) {
+  .navbar-brand-name {
+    font-size: 17px;
+  }
+
+  .navbar-lang select {
+    max-width: 112px;
+    padding: 0 9px;
+  }
+}

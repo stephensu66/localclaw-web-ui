@@ -10,12 +10,22 @@ function Hero({ hero }) {
           <p className="hero-subtitle">{hero.subtitle}</p>
 
           <div className="hero-actions">
-            <button type="button" className="btn btn-primary">
-              {hero.windowsButton}
-            </button>
-            <button type="button" className="btn btn-secondary">
-              {hero.macButton}
-            </button>
+            {hero.macOptions?.length > 0 && (
+              <details className="download-menu">
+                <summary className="btn btn-primary">
+                  <span>{hero.macButton}</span>
+                  <span className="download-menu-icon" aria-hidden="true" />
+                </summary>
+                <div className="download-menu-list">
+                  {hero.macOptions.map((option) => (
+                    <a key={option.label} href={option.href} className="download-menu-item">
+                      <span>{option.label}</span>
+                      {option.description && <small>{option.description}</small>}
+                    </a>
+                  ))}
+                </div>
+              </details>
+            )}
           </div>
 
           <div className="hero-meta">

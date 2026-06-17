@@ -49,7 +49,12 @@ function Footer({ footer }) {
             {socialLinks.length > 0 && (
               <div className="footer-social-links">
                 {socialLinks.map((item) => (
-                  <a key={item.label} href={item.href}>
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    target={item.external ? '_blank' : undefined}
+                    rel={item.external ? 'noreferrer' : undefined}
+                  >
                     {item.label}
                   </a>
                 ))}

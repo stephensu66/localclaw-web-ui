@@ -73,13 +73,32 @@ function ProductSection({ section }) {
                       {downloads.length > 0 && (
                         <div className="product-downloads">
                           {downloads.map((item) => (
-                            <a
-                              key={item.label}
-                              href={item.href}
-                              className={`product-download-btn product-download-btn-${item.variant || 'secondary'}`}
-                            >
-                              {item.label}
-                            </a>
+                            item.options?.length > 0 ? (
+                              <details className="product-download-menu" key={item.label}>
+                                <summary
+                                  className={`product-download-btn product-download-btn-${item.variant || 'secondary'}`}
+                                >
+                                  <span>{item.label}</span>
+                                  <span className="product-download-menu-icon" aria-hidden="true" />
+                                </summary>
+                                <div className="product-download-menu-list">
+                                  {item.options.map((option) => (
+                                    <a key={option.label} href={option.href}>
+                                      <span>{option.label}</span>
+                                      {option.description && <small>{option.description}</small>}
+                                    </a>
+                                  ))}
+                                </div>
+                              </details>
+                            ) : (
+                              <a
+                                key={item.label}
+                                href={item.href}
+                                className={`product-download-btn product-download-btn-${item.variant || 'secondary'}`}
+                              >
+                                {item.label}
+                              </a>
+                            )
                           ))}
                         </div>
                       )}

@@ -41,7 +41,7 @@ function normalizeRoute(hash) {
 }
 
 function App() {
-  const [language, setLanguage] = useState('zh');
+  const [language, setLanguage] = useState('en');
   const [activeRoute, setActiveRoute] = useState(() =>
     typeof window !== 'undefined' ? normalizeRoute(window.location.hash) : '#home'
   );

@@ -86,13 +86,24 @@
 
 .footer-social-links {
   display: flex;
-  gap: 14px;
+  flex-wrap: wrap;
+  gap: 10px;
   margin-top: 14px;
 }
 
 .footer-social-links a {
-  font-size: 14px;
-  color: #7c7c86;
+  min-height: 34px;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #c8dafb;
+  border-radius: 10px;
+  padding: 0 12px;
+  background: #ffffff;
+  color: #1550cb;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 6px 14px rgba(31, 100, 255, 0.08);
 }
 
 .footer-qr-group {

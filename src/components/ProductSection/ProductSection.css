@@ -175,18 +175,105 @@
   font-weight: 600;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .product-download-btn-primary {
-  color: #ffffff;
-  background: linear-gradient(135deg, #1f64ff 0%, #0f4bd8 100%);
-  box-shadow: 0 10px 20px rgba(31, 100, 255, 0.24);
+  color: #1550cb;
+  border: 1px solid #c8dafb;
+  background: linear-gradient(180deg, #ffffff 0%, #f4f8ff 100%);
+  box-shadow: 0 8px 18px rgba(31, 100, 255, 0.1);
 }
 
 .product-download-btn-secondary {
-  color: #0f4bd8;
+  color: #1550cb;
   border: 1px solid #c8dafb;
-  background: #f4f8ff;
+  background: linear-gradient(180deg, #ffffff 0%, #f4f8ff 100%);
+  box-shadow: 0 8px 18px rgba(31, 100, 255, 0.1);
+}
+
+.product-download-btn:hover {
+  border-color: #91b5f3;
+  background: #eef5ff;
+}
+
+.product-download-btn:focus {
+  outline: none;
+}
+
+.product-download-btn:focus-visible {
+  outline: none;
+  border-color: #91b5f3;
+  background: #eef5ff;
+}
+
+.product-download-menu[open] > .product-download-btn {
+  border-color: #91b5f3;
+  background: #eef5ff;
+}
+
+.product-download-menu {
+  position: relative;
+}
+
+.product-download-menu summary {
+  list-style: none;
+}
+
+.product-download-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.product-download-menu-icon {
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+}
+
+.product-download-menu[open] .product-download-menu-icon {
+  transform: translateY(2px) rotate(225deg);
+}
+
+.product-download-menu-list {
+  position: absolute;
+  z-index: 4;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 230px;
+  padding: 7px;
+  border: 1px solid #dce7f7;
+  border-radius: 11px;
+  background: #ffffff;
+  box-shadow: 0 16px 34px rgba(15, 23, 42, 0.14);
+}
+
+.product-download-menu-list a {
+  display: grid;
+  gap: 3px;
+  padding: 10px;
+  border-radius: 8px;
+  color: #172033;
+  text-decoration: none;
+}
+
+.product-download-menu-list a:hover {
+  background: #f3f7ff;
+}
+
+.product-download-menu-list span {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.product-download-menu-list small {
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.35;
 }
 
 .product-compare {

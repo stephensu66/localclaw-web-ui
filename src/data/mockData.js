@@ -1,6 +1,20 @@
 import contactWechatQr from '../assets/images/contact-qr.png';
 
-const mockData = {
+const MACOS_APPLE_SILICON_DOWNLOAD_URL =
+  'https://github.com/stephensu66/LocalClaw/releases/download/1.0.0/LocalClaw_1.0.0_aarch64.dmg';
+const MACOS_INTEL_DOWNLOAD_URL =
+  'https://github.com/stephensu66/LocalClaw/releases/download/1.0.0/LocalClaw_1.0.0_Intel.dmg';
+const PERSONAL_EMAIL = 'stephen.su66@gmail.com';
+const LINKEDIN_URL = 'https://www.linkedin.com/in/stephen-su-94674a369/';
+const GITHUB_URL = 'https://github.com/stephensu66';
+
+const LANGUAGE_OPTIONS = [
+  { value: 'en', label: 'English' },
+  { value: 'zh', label: '简体中文' },
+  { value: 'fr', label: 'Francais' }
+];
+
+const baseData = {
   zh: {
     brandName: 'LocalClaw',
     navItems: [
@@ -34,21 +48,32 @@ const mockData = {
     hero: {
       title: '下载 LocalClaw',
       subtitle: '安全可控的桌面智能体工具',
-      windowsButton: '下载 Windows 版本',
       macButton: '下载 macOS 版本',
+      macOptions: [
+        {
+          label: 'Apple Silicon 芯片',
+          description: '适用于 M1 / M2 / M3 / M4 Mac',
+          href: MACOS_APPLE_SILICON_DOWNLOAD_URL
+        },
+        {
+          label: 'Intel 芯片',
+          description: '适用于 Intel 处理器 Mac',
+          href: MACOS_INTEL_DOWNLOAD_URL
+        }
+      ],
       versionLabel: '当前版本',
       versionValue: 'v1.2.0',
       systemLabel: '支持系统',
-      systemValue: 'Windows 10+，macOS 11+',
+      systemValue: 'macOS 11+',
       installGuideLabel: '安装指南',
-      installGuideHref: '/legal/download.html',
+      installGuideHref: '/legal/download.html?lang=zh',
       legalNoticePrefix: '下载即表示你已阅读并同意',
       privacyPolicyLabel: '《隐私政策》',
-      privacyPolicyHref: '/legal/privacy.html',
+      privacyPolicyHref: '/legal/privacy.html?lang=zh',
       userAgreementLabel: '《用户协议》',
-      userAgreementHref: '/legal/terms.html',
+      userAgreementHref: '/legal/terms.html?lang=zh',
       downloadNoteLabel: '《下载说明》',
-      downloadNoteHref: '/legal/download.html'
+      downloadNoteHref: '/legal/download.html?lang=zh'
     },
     quickFeatures: [
       { label: '安全设置' },
@@ -122,24 +147,30 @@ const mockData = {
           key: 'localclaw',
           badge: '桌面智能体',
           name: 'LocalClaw',
-          tagline: 'Windows / macOS 免费下载',
+          tagline: 'macOS 免费下载',
           summary:
             '面向开发者与团队的本地优先智能体平台，提供可控执行、可观测日志与可追踪权限体系。',
           highlights: [
-            '双端免费下载：Windows 与 macOS 即下即用',
+            'macOS 免费下载，按芯片选择 Apple Silicon 或 Intel 版本',
             '统一任务编排与工具调用接口，便于快速接入业务流程',
             '免费版到高级版可无缝升级，避免重复迁移'
           ],
           downloads: [
             {
-              label: 'Windows 免费下载',
-              href: '/legal/download.html?platform=windows',
-              variant: 'primary'
-            },
-            {
               label: 'macOS 免费下载',
-              href: '/legal/download.html?platform=macos',
-              variant: 'secondary'
+              variant: 'primary',
+              options: [
+                {
+                  label: 'Apple Silicon 芯片',
+                  description: '适用于 M1 / M2 / M3 / M4 Mac',
+                  href: MACOS_APPLE_SILICON_DOWNLOAD_URL
+                },
+                {
+                  label: 'Intel 芯片',
+                  description: '适用于 Intel 处理器 Mac',
+                  href: MACOS_INTEL_DOWNLOAD_URL
+                }
+              ]
             }
           ],
           comparisonTitle: '免费版 vs 高级版',
@@ -156,7 +187,7 @@ const mockData = {
           ],
           cta: {
             label: '下载与版本说明',
-            href: '/legal/download.html'
+            href: '/legal/download.html?lang=zh'
           },
           detail: {
             actions: [
@@ -1115,7 +1146,9 @@ const mockData = {
       contactTitle: '联系我们',
       contacts: [
         { label: '联系电话', value: '18811753654', href: 'tel:18811753654' },
-        { label: '联系邮箱', value: 'founder@eventa.com.cn', href: 'mailto:founder@eventa.com.cn' }
+        { label: '个人邮箱', value: PERSONAL_EMAIL, href: `mailto:${PERSONAL_EMAIL}` },
+        { label: 'LinkedIn', value: 'Stephen Su', href: LINKEDIN_URL, external: true },
+        { label: 'GitHub', value: 'stephensu66', href: GITHUB_URL, external: true }
       ],
       wechat: {
         title: '微信联系',
@@ -1141,8 +1174,8 @@ const mockData = {
           links: [
             { label: '关于我们', href: '#about' },
             { label: '联系方式', href: '#about-contact' },
-            { label: '隐私政策', href: '/legal/privacy.html' },
-            { label: '用户协议', href: '/legal/terms.html' }
+            { label: '隐私政策', href: '/legal/privacy.html?lang=zh' },
+            { label: '用户协议', href: '/legal/terms.html?lang=zh' }
           ]
         },
         {
@@ -1150,20 +1183,24 @@ const mockData = {
           links: [
             { label: '使用帮助', href: '#' },
             { label: '服务器手册', href: '#' },
-            { label: '下载说明', href: '/legal/download.html' }
+            { label: '下载说明', href: '/legal/download.html?lang=zh' }
           ]
         }
       ],
       companyInfo: [
         { label: '联系电话', value: '18811753654' },
-        { label: '联系邮箱', value: 'founder@eventa.com.cn' },
+        { label: '个人邮箱', value: PERSONAL_EMAIL, href: `mailto:${PERSONAL_EMAIL}` },
         {
           label: 'ICP备案号',
           value: '京ICP备2025142068号-1',
           href: 'https://beian.miit.gov.cn/#/Integrated/index'
         }
       ],
-      socialLinks: [],
+      socialLinks: [
+        { label: 'Email', href: `mailto:${PERSONAL_EMAIL}` },
+        { label: 'LinkedIn', href: LINKEDIN_URL, external: true },
+        { label: 'GitHub', href: GITHUB_URL, external: true }
+      ],
       qrBlocks: [
         {
           title: '商业咨询',
@@ -1208,21 +1245,32 @@ const mockData = {
     hero: {
       title: 'Download LocalClaw',
       subtitle: 'A secure and controllable desktop agent tool',
-      windowsButton: 'Download for Windows',
       macButton: 'Download for macOS',
+      macOptions: [
+        {
+          label: 'Apple Silicon',
+          description: 'For M1 / M2 / M3 / M4 Macs',
+          href: MACOS_APPLE_SILICON_DOWNLOAD_URL
+        },
+        {
+          label: 'Intel',
+          description: 'For Intel-based Macs',
+          href: MACOS_INTEL_DOWNLOAD_URL
+        }
+      ],
       versionLabel: 'Version',
       versionValue: 'v1.2.0',
       systemLabel: 'Systems',
-      systemValue: 'Windows 10+, macOS 11+',
+      systemValue: 'macOS 11+',
       installGuideLabel: 'Installation Guide',
-      installGuideHref: '/legal/download.html',
+      installGuideHref: '/legal/download.html?lang=en',
       legalNoticePrefix: 'By downloading, you agree to',
       privacyPolicyLabel: 'Privacy Policy',
-      privacyPolicyHref: '/legal/privacy.html',
+      privacyPolicyHref: '/legal/privacy.html?lang=en',
       userAgreementLabel: 'Terms of Service',
-      userAgreementHref: '/legal/terms.html',
+      userAgreementHref: '/legal/terms.html?lang=en',
       downloadNoteLabel: 'Download Notes',
-      downloadNoteHref: '/legal/download.html'
+      downloadNoteHref: '/legal/download.html?lang=en'
     },
     quickFeatures: [
       { label: 'Security Settings' },
@@ -1289,24 +1337,30 @@ const mockData = {
           key: 'localclaw',
           badge: 'Desktop Agent',
           name: 'LocalClaw',
-          tagline: 'Free on Windows / macOS',
+          tagline: 'Free on macOS',
           summary:
             'A local-first agent platform for developers and teams, with controllable execution, observable logs, and traceable permission controls.',
           highlights: [
-            'Free download on both Windows and macOS',
+            'Free macOS download with Apple Silicon and Intel builds',
             'Unified orchestration and tool-calling interfaces for workflows',
             'Smooth upgrade path from free to enterprise advanced plan'
           ],
           downloads: [
             {
-              label: 'Download for Windows',
-              href: '/legal/download.html?platform=windows',
-              variant: 'primary'
-            },
-            {
               label: 'Download for macOS',
-              href: '/legal/download.html?platform=macos',
-              variant: 'secondary'
+              variant: 'primary',
+              options: [
+                {
+                  label: 'Apple Silicon',
+                  description: 'For M1 / M2 / M3 / M4 Macs',
+                  href: MACOS_APPLE_SILICON_DOWNLOAD_URL
+                },
+                {
+                  label: 'Intel',
+                  description: 'For Intel-based Macs',
+                  href: MACOS_INTEL_DOWNLOAD_URL
+                }
+              ]
             }
           ],
           comparisonTitle: 'Free vs Advanced',
@@ -1323,7 +1377,7 @@ const mockData = {
           ],
           cta: {
             label: 'Download & Notes',
-            href: '/legal/download.html'
+            href: '/legal/download.html?lang=en'
           },
           detail: {
             actions: [
@@ -2328,7 +2382,9 @@ const mockData = {
       contactTitle: 'Contact Us',
       contacts: [
         { label: 'Phone', value: '18811753654', href: 'tel:18811753654' },
-        { label: 'Email', value: 'founder@eventa.com.cn', href: 'mailto:founder@eventa.com.cn' }
+        { label: 'Personal Email', value: PERSONAL_EMAIL, href: `mailto:${PERSONAL_EMAIL}` },
+        { label: 'LinkedIn', value: 'Stephen Su', href: LINKEDIN_URL, external: true },
+        { label: 'GitHub', value: 'stephensu66', href: GITHUB_URL, external: true }
       ],
       wechat: {
         title: 'WeChat',
@@ -2354,8 +2410,8 @@ const mockData = {
           links: [
             { label: 'About Us', href: '#about' },
             { label: 'Contact', href: '#about-contact' },
-            { label: 'Privacy Policy', href: '/legal/privacy.html' },
-            { label: 'Terms of Service', href: '/legal/terms.html' }
+            { label: 'Privacy Policy', href: '/legal/privacy.html?lang=en' },
+            { label: 'Terms of Service', href: '/legal/terms.html?lang=en' }
           ]
         },
         {
@@ -2363,20 +2419,24 @@ const mockData = {
           links: [
             { label: 'Help Center', href: '#' },
             { label: 'Server Manual', href: '#' },
-            { label: 'Download Notes', href: '/legal/download.html' }
+            { label: 'Download Notes', href: '/legal/download.html?lang=en' }
           ]
         }
       ],
       companyInfo: [
         { label: 'Phone', value: '18811753654' },
-        { label: 'Email', value: 'founder@eventa.com.cn' },
+        { label: 'Personal Email', value: PERSONAL_EMAIL, href: `mailto:${PERSONAL_EMAIL}` },
         {
           label: 'ICP Filing',
           value: '京ICP备2025142068号-1',
           href: 'https://beian.miit.gov.cn/#/Integrated/index'
         }
       ],
-      socialLinks: [],
+      socialLinks: [
+        { label: 'Email', href: `mailto:${PERSONAL_EMAIL}` },
+        { label: 'LinkedIn', href: LINKEDIN_URL, external: true },
+        { label: 'GitHub', href: GITHUB_URL, external: true }
+      ],
       qrBlocks: [
         {
           title: 'Contact WeChat',
@@ -2386,6 +2446,300 @@ const mockData = {
         }
       ],
       copyright: 'Copyright ©2026 北京超维引力科技有限公司 All Rights Reserved.'
+    }
+  }
+};
+
+const frCategoryLabels = {
+  ai: 'IA',
+  math: 'Mathematiques',
+  physics: 'Physique',
+  biology: 'Biologie',
+  medicine: 'Medecine',
+  enterprise: 'Entreprise',
+  chemistry: 'Chimie',
+  materials: 'Science des materiaux',
+  other: 'Autres'
+};
+
+const mockData = {
+  ...baseData,
+  zh: {
+    ...baseData.zh,
+    languageOptions: LANGUAGE_OPTIONS
+  },
+  en: {
+    ...baseData.en,
+    languageOptions: LANGUAGE_OPTIONS
+  },
+  fr: {
+    ...baseData.en,
+    languageOptions: LANGUAGE_OPTIONS,
+    navItems: [
+      { label: 'Accueil', href: '#home' },
+      { label: 'Produits', href: '#products' },
+      { label: 'Frontiere', href: '#problems' },
+      { label: 'A propos', href: '#about' }
+    ],
+    pages: {
+      home: {
+        title: 'Accueil',
+        description: 'Vue generale des produits, du telechargement et des services.'
+      },
+      products: {
+        title: 'Produits',
+        description: 'Capacites principales, cas d usage et perimetre fonctionnel.'
+      },
+      problems: {
+        title: 'Problemes de frontiere',
+        description: 'Defis techniques et axes de recherche que nous explorons.'
+      },
+      about: {
+        title: 'A propos',
+        description: 'Contexte de l equipe, philosophie produit et contact.'
+      }
+    },
+    hero: {
+      ...baseData.en.hero,
+      title: 'Telecharger LocalClaw',
+      subtitle: 'Un outil agent de bureau securise et controlable',
+      macButton: 'Telecharger pour macOS',
+      macOptions: [
+        {
+          label: 'Apple Silicon',
+          description: 'Pour les Mac M1 / M2 / M3 / M4',
+          href: MACOS_APPLE_SILICON_DOWNLOAD_URL
+        },
+        {
+          label: 'Intel',
+          description: 'Pour les Mac avec processeur Intel',
+          href: MACOS_INTEL_DOWNLOAD_URL
+        }
+      ],
+      versionLabel: 'Version',
+      systemLabel: 'Systemes',
+      installGuideLabel: 'Guide d installation',
+      installGuideHref: '/legal/download.html?lang=fr',
+      legalNoticePrefix: 'En telechargeant, vous acceptez',
+      privacyPolicyLabel: 'Politique de confidentialite',
+      privacyPolicyHref: '/legal/privacy.html?lang=fr',
+      userAgreementLabel: 'Conditions d utilisation',
+      userAgreementHref: '/legal/terms.html?lang=fr',
+      downloadNoteLabel: 'Notes de telechargement',
+      downloadNoteHref: '/legal/download.html?lang=fr'
+    },
+    quickFeatures: [
+      { label: 'Parametres de securite' },
+      { label: 'Acces distant' },
+      { label: 'Collaboration equipe' },
+      { label: 'Personnalisation entreprise' },
+      { label: 'Demander une offre sur mesure', highlight: true }
+    ],
+    serviceSection: {
+      ...baseData.en.serviceSection,
+      title: 'Offres et services',
+      subtitle: 'La version gratuite est disponible, avec une option avancee pour les entreprises.',
+      plans: [
+        {
+          ...baseData.en.serviceSection.plans[0],
+          name: 'Gratuit',
+          price: 'Gratuit',
+          period: 'Local mono-machine',
+          description: 'Pour les developpeurs individuels, les essais et le debogage local',
+          buttonText: 'Telecharger'
+        },
+        {
+          ...baseData.en.serviceSection.plans[1],
+          name: 'Avance',
+          badge: 'Recommande',
+          price: 'Contacter les ventes',
+          period: 'Deploiement entreprise',
+          description: 'Pour les equipes de production et les exigences de conformite',
+          buttonText: 'Demander une offre'
+        }
+      ]
+    },
+    productSection: {
+      ...baseData.en.productSection,
+      title: 'Portefeuille produits',
+      subtitle: 'Trois lignes de produits pour la productivite locale, l intelligence de frontiere et la communaute technique.',
+      backToProductsLabel: 'Retour aux produits',
+      corePointsTitle: 'Capacites cles',
+      scenariosTitle: 'Cas d usage',
+      freeLabel: 'Gratuit',
+      advancedLabel: 'Avance',
+      products: [
+        {
+          ...baseData.en.productSection.products[0],
+          badge: 'Agent de bureau',
+          tagline: 'Gratuit sur macOS',
+          summary:
+            'Une plateforme agent locale pour developpeurs et equipes, avec execution controlable, journaux observables et permissions tracables.',
+          highlights: [
+            'Telechargement macOS gratuit avec versions Apple Silicon et Intel',
+            'Interfaces unifiees pour orchestration et appels d outils',
+            'Passage fluide de la version gratuite au service avance'
+          ],
+          downloads: [
+            {
+              label: 'Telecharger pour macOS',
+              variant: 'primary',
+              options: [
+                {
+                  label: 'Apple Silicon',
+                  description: 'Pour les Mac M1 / M2 / M3 / M4',
+                  href: MACOS_APPLE_SILICON_DOWNLOAD_URL
+                },
+                {
+                  label: 'Intel',
+                  description: 'Pour les Mac avec processeur Intel',
+                  href: MACOS_INTEL_DOWNLOAD_URL
+                }
+              ]
+            }
+          ],
+          comparisonTitle: 'Gratuit vs Avance',
+          cta: {
+            label: 'Telechargement et notes',
+            href: '/legal/download.html?lang=fr'
+          },
+          detail: {
+            ...baseData.en.productSection.products[0].detail,
+            actions: [
+              { label: 'Voir le service avance', href: '#home' },
+              { label: 'Contacter l equipe', href: '#about-contact' }
+            ],
+            corePoints: [
+              'Architecture locale avec journaux et permissions tracables',
+              'Interface graphique et commandes pour differents usages',
+              'Politiques de permission par defaut avec historique auditable',
+              'Extension progressive des usages individuels vers les equipes'
+            ],
+            scenarios: [
+              'Developpeurs individuels automatisant des taches locales',
+              'Petites equipes partageant des modeles de taches',
+              'Equipes techniques integrant des workflows internes'
+            ]
+          }
+        },
+        {
+          ...baseData.en.productSection.products[1],
+          badge: 'Intelligence de frontiere',
+          name: 'Super Agent',
+          tagline: 'Initiative super-agent pour la recherche et les problemes complexes',
+          summary:
+            'Inspiree des directions de recherche de type DeepMind, concue pour les problemes scientifiques, industriels et de frontiere.',
+          highlights: [
+            'Collaboration multi-agents pour les taches longues',
+            'Integration de preuves issues d articles, de code et d experiences',
+            'Boucle complete de la definition du probleme a la validation'
+          ],
+          cta: {
+            label: 'Explorer les axes de recherche',
+            href: '#problems'
+          }
+        },
+        {
+          ...baseData.en.productSection.products[2],
+          badge: 'Mini-programme WeChat',
+          tagline: 'Plateforme sociale technique hors ligne',
+          summary:
+            'Une plateforme reliant developpeurs, chercheurs et equipes autour de sujets techniques reels.',
+          highlights: [
+            'Decouverte, inscription et organisation d evenements',
+            'Discussions apres evenement et capitalisation des connaissances',
+            'Connexions techniques de qualite et opportunites de collaboration'
+          ],
+          cta: {
+            label: 'Communaute et partenariat',
+            href: '#about'
+          }
+        }
+      ]
+    },
+    problemSection: {
+      ...baseData.en.problemSection,
+      title: 'Problemes de frontiere',
+      subtitle: 'Parcourez les principaux defis par domaine. Cliquez sur une categorie pour voir les details et references.',
+      sourceLabel: 'Source',
+      categories: baseData.en.problemSection.categories.map((category) => ({
+        ...category,
+        label: frCategoryLabels[category.key] || category.label
+      }))
+    },
+    aboutSection: {
+      ...baseData.en.aboutSection,
+      title: 'A propos de LocalClaw',
+      description:
+        'Nous connectons les capacites d agents locaux, les services avances, les besoins des entreprises et la recherche de frontiere afin de transformer des problemes complexes en solutions utilisables.',
+      contactTitle: 'Nous contacter',
+      contacts: [
+        { label: 'Telephone', value: '18811753654', href: 'tel:18811753654' },
+        { label: 'Email personnel', value: PERSONAL_EMAIL, href: `mailto:${PERSONAL_EMAIL}` },
+        { label: 'LinkedIn', value: 'Stephen Su', href: LINKEDIN_URL, external: true },
+        { label: 'GitHub', value: 'stephensu66', href: GITHUB_URL, external: true }
+      ],
+      wechat: {
+        title: 'WeChat',
+        image: contactWechatQr,
+        caption: 'Scannez pour nous contacter'
+      },
+      button: 'Nous contacter'
+    },
+    footer: {
+      ...baseData.en.footer,
+      placeholderText: 'A completer',
+      qrPlaceholderText: 'QR code',
+      linkGroups: [
+        {
+          title: 'Communaute',
+          links: [
+            { label: 'Roadmap', href: '#' },
+            { label: 'Signaler un bug', href: '#' },
+            { label: 'Rapport securite', href: '#' }
+          ]
+        },
+        {
+          title: 'A propos',
+          links: [
+            { label: 'A propos', href: '#about' },
+            { label: 'Contact', href: '#about-contact' },
+            { label: 'Confidentialite', href: '/legal/privacy.html?lang=fr' },
+            { label: 'Conditions', href: '/legal/terms.html?lang=fr' }
+          ]
+        },
+        {
+          title: 'Support',
+          links: [
+            { label: 'Aide', href: '#' },
+            { label: 'Manuel serveur', href: '#' },
+            { label: 'Notes de telechargement', href: '/legal/download.html?lang=fr' }
+          ]
+        }
+      ],
+      companyInfo: [
+        { label: 'Telephone', value: '18811753654' },
+        { label: 'Email personnel', value: PERSONAL_EMAIL, href: `mailto:${PERSONAL_EMAIL}` },
+        {
+          label: 'ICP',
+          value: '京ICP备2025142068号-1',
+          href: 'https://beian.miit.gov.cn/#/Integrated/index'
+        }
+      ],
+      socialLinks: [
+        { label: 'Email', href: `mailto:${PERSONAL_EMAIL}` },
+        { label: 'LinkedIn', href: LINKEDIN_URL, external: true },
+        { label: 'GitHub', href: GITHUB_URL, external: true }
+      ],
+      qrBlocks: [
+        {
+          title: 'Contact WeChat',
+          image: contactWechatQr,
+          caption: '',
+          note: ''
+        }
+      ],
+      copyright: 'Copyright ©2026 北京超维引力科技有限公司. Tous droits reserves.'
     }
   }
 };

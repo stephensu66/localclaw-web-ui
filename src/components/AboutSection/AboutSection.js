@@ -25,7 +25,12 @@ function AboutSection({ section }) {
                     <li key={item.label}>
                       <span className="about-contact-label">{item.label}:</span>
                       {item.href ? (
-                        <a href={item.href} className="about-contact-link">
+                        <a
+                          href={item.href}
+                          className="about-contact-link"
+                          target={item.external ? '_blank' : undefined}
+                          rel={item.external ? 'noreferrer' : undefined}
+                        >
                           {item.value}
                         </a>
                       ) : (
