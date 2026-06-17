@@ -3,8 +3,7 @@ import './AboutSection.css';
 
 function AboutSection({ section }) {
   const contacts = section.contacts ?? [];
-  const wechat = section.wechat ?? null;
-  const hasContactModule = contacts.length > 0 || Boolean(wechat) || Boolean(section.button);
+  const hasContactModule = contacts.length > 0 || Boolean(section.button);
 
   return (
     <section className="about-section" id="about">
@@ -41,13 +40,6 @@ function AboutSection({ section }) {
                 </ul>
               )}
 
-              {wechat && (
-                <div className="about-contact-wechat">
-                  <h4>{wechat.title}</h4>
-                  {wechat.image && <img src={wechat.image} alt={wechat.caption || wechat.title} className="about-wechat-image" />}
-                  {wechat.caption && <p className="about-wechat-caption">{wechat.caption}</p>}
-                </div>
-              )}
             </article>
           )}
         </div>

@@ -5,9 +5,7 @@ function Footer({ footer }) {
   const linkGroups = footer.linkGroups ?? [];
   const companyInfo = footer.companyInfo ?? [];
   const socialLinks = footer.socialLinks ?? [];
-  const qrBlocks = footer.qrBlocks ?? [];
   const placeholderText = footer.placeholderText || '待填写';
-  const qrPlaceholderText = footer.qrPlaceholderText || '二维码占位';
 
   return (
     <footer className="footer">
@@ -62,20 +60,6 @@ function Footer({ footer }) {
             )}
           </section>
 
-          <div className="footer-qr-group">
-            {qrBlocks.map((item) => (
-              <section className="footer-qr-card" key={item.title}>
-                <h4>{item.title}</h4>
-                {item.image ? (
-                  <img src={item.image} alt={item.alt || item.title} className="footer-qr-image" />
-                ) : (
-                  <div className="footer-qr-placeholder">{qrPlaceholderText}</div>
-                )}
-                <p className="footer-qr-caption">{item.caption || placeholderText}</p>
-                {item.note && <p className="footer-qr-note">{item.note}</p>}
-              </section>
-            ))}
-          </div>
         </div>
       </div>
     </footer>

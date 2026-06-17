@@ -1,5 +1,3 @@
-import contactWechatQr from '../assets/images/contact-qr.png';
-
 const MACOS_APPLE_SILICON_DOWNLOAD_URL =
   'https://github.com/stephensu66/LocalClaw/releases/download/1.0.0/LocalClaw_1.0.0_aarch64.dmg';
 const MACOS_INTEL_DOWNLOAD_URL =
@@ -1150,16 +1148,10 @@ const baseData = {
         { label: 'LinkedIn', value: 'Stephen Su', href: LINKEDIN_URL, external: true },
         { label: 'GitHub', value: 'stephensu66', href: GITHUB_URL, external: true }
       ],
-      wechat: {
-        title: '微信联系',
-        image: contactWechatQr,
-        caption: '微信扫码联系'
-      },
       button: '联系我们'
     },
     footer: {
       placeholderText: '待填写',
-      qrPlaceholderText: '二维码占位',
       linkGroups: [
         {
           title: '社区',
@@ -1200,14 +1192,6 @@ const baseData = {
         { label: 'Email', href: `mailto:${PERSONAL_EMAIL}` },
         { label: 'LinkedIn', href: LINKEDIN_URL, external: true },
         { label: 'GitHub', href: GITHUB_URL, external: true }
-      ],
-      qrBlocks: [
-        {
-          title: '商业咨询',
-          image: contactWechatQr,
-          caption: '微信扫码联系销售',
-          note: ''
-        }
       ],
       copyright: 'Copyright ©2026 北京超维引力科技有限公司 版权所有'
     }
@@ -2386,16 +2370,10 @@ const baseData = {
         { label: 'LinkedIn', value: 'Stephen Su', href: LINKEDIN_URL, external: true },
         { label: 'GitHub', value: 'stephensu66', href: GITHUB_URL, external: true }
       ],
-      wechat: {
-        title: 'WeChat',
-        image: contactWechatQr,
-        caption: 'Scan to contact us'
-      },
       button: 'Contact Us'
     },
     footer: {
       placeholderText: 'To be filled',
-      qrPlaceholderText: 'QR Placeholder',
       linkGroups: [
         {
           title: 'Community',
@@ -2436,14 +2414,6 @@ const baseData = {
         { label: 'Email', href: `mailto:${PERSONAL_EMAIL}` },
         { label: 'LinkedIn', href: LINKEDIN_URL, external: true },
         { label: 'GitHub', href: GITHUB_URL, external: true }
-      ],
-      qrBlocks: [
-        {
-          title: 'Contact WeChat',
-          image: contactWechatQr,
-          caption: '',
-          note: ''
-        }
       ],
       copyright: 'Copyright ©2026 北京超维引力科技有限公司 All Rights Reserved.'
     }
@@ -2679,17 +2649,11 @@ const mockData = {
         { label: 'LinkedIn', value: 'Stephen Su', href: LINKEDIN_URL, external: true },
         { label: 'GitHub', value: 'stephensu66', href: GITHUB_URL, external: true }
       ],
-      wechat: {
-        title: 'WeChat',
-        image: contactWechatQr,
-        caption: 'Scannez pour nous contacter'
-      },
       button: 'Nous contacter'
     },
     footer: {
       ...baseData.en.footer,
       placeholderText: 'A completer',
-      qrPlaceholderText: 'QR code',
       linkGroups: [
         {
           title: 'Communaute',
@@ -2730,14 +2694,6 @@ const mockData = {
         { label: 'Email', href: `mailto:${PERSONAL_EMAIL}` },
         { label: 'LinkedIn', href: LINKEDIN_URL, external: true },
         { label: 'GitHub', href: GITHUB_URL, external: true }
-      ],
-      qrBlocks: [
-        {
-          title: 'Contact WeChat',
-          image: contactWechatQr,
-          caption: '',
-          note: ''
-        }
       ],
       copyright: 'Copyright ©2026 北京超维引力科技有限公司. Tous droits reserves.'
     }

@@ -35,9 +35,8 @@
 
 .about-card-contact {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr;
   justify-content: start;
-  column-gap: 100px;
   row-gap: 12px;
   align-items: center;
 }
@@ -84,39 +83,6 @@
   color: #334155;
 }
 
-.about-contact-wechat {
-  grid-column: 2;
-  grid-row: 2;
-  margin-top: 0;
-  justify-self: center;
-  text-align: center;
-}
-
-.about-contact-wechat h4 {
-  margin: 0 0 8px;
-  font-size: 14px;
-  color: #1e293b;
-}
-
-.about-wechat-image {
-  display: block;
-  width: 112px;
-  height: 112px;
-  margin: 0 auto;
-  object-fit: cover;
-  border-radius: 8px;
-  border: 1px solid #d7e4f8;
-  background: #ffffff;
-}
-
-.about-wechat-caption {
-  margin: 8px 0 0;
-  font-size: 13px;
-  line-height: 1.5;
-  color: #64748b;
-  white-space: normal;
-}
-
 .about-card button {
   grid-column: 1;
   grid-row: 3;
@@ -152,7 +118,6 @@
 
   .about-card-contact .section-title,
   .about-contact-list,
-  .about-contact-wechat,
   .about-card button {
     grid-column: 1;
     grid-row: auto;
@@ -162,14 +127,4 @@
     font-size: 14px;
   }
 
-  .about-contact-wechat {
-    justify-self: start;
-    text-align: left;
-  }
-
-  .about-wechat-image {
-    width: 96px;
-    height: 96px;
-    margin: 0;
-  }
 }
