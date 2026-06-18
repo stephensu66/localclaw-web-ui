@@ -4,6 +4,7 @@ const MACOS_INTEL_DOWNLOAD_URL =
   'https://github.com/stephensu66/LocalClaw/releases/download/1.0.0/LocalClaw_1.0.0_Intel.dmg';
 const PERSONAL_EMAIL = 'stephen.su66@gmail.com';
 const LINKEDIN_URL = 'https://www.linkedin.com/in/stephen-su-94674a369/';
+const LINKEDIN_DISPLAY = 'linkedin.com/in/stephen-su-94674a369';
 const GITHUB_URL = 'https://github.com/stephensu66';
 
 const LANGUAGE_OPTIONS = [
@@ -111,6 +112,7 @@ const baseData = {
           period: '企业部署',
           description: '适合团队、企业、科研机构、复杂场景',
           buttonText: '联系咨询定制方案',
+          buttonHref: '#about-contact',
           buttonDisabled: false,
           features: [
             '支持定制超级智能体，面向科研与企业复杂问题',
@@ -1143,9 +1145,8 @@ const baseData = {
         '北京超维引力科技有限公司是一家专注于智能体产品、复杂问题求解与前沿技术落地的科技公司。我们致力于打造更易用、更本地化、更可控的 AI 产品，让先进智能能力不再局限于命令行和少数技术人群，而能够真正服务个人、团队、企业与科研场景。\n\n围绕 LocalClaw，我们持续降低本地智能体的使用门槛；\n围绕超级智能体方向，我们探索面向科研与工业复杂问题的高阶智能体系统；\n同时，我们也关注全球前沿科学与工业领域中尚未解决的重要问题，推动产品能力与真实问题之间的连接。',
       contactTitle: '联系我们',
       contacts: [
-        { label: '联系电话', value: '18811753654', href: 'tel:18811753654' },
         { label: '个人邮箱', value: PERSONAL_EMAIL, href: `mailto:${PERSONAL_EMAIL}` },
-        { label: 'LinkedIn', value: 'Stephen Su', href: LINKEDIN_URL, external: true },
+        { label: 'LinkedIn', value: LINKEDIN_DISPLAY, href: LINKEDIN_URL, external: true },
         { label: 'GitHub', value: 'stephensu66', href: GITHUB_URL, external: true }
       ],
       button: '联系我们'
@@ -1180,8 +1181,8 @@ const baseData = {
         }
       ],
       companyInfo: [
-        { label: '联系电话', value: '18811753654' },
         { label: '个人邮箱', value: PERSONAL_EMAIL, href: `mailto:${PERSONAL_EMAIL}` },
+        { label: 'LinkedIn', value: LINKEDIN_DISPLAY, href: LINKEDIN_URL },
         {
           label: 'ICP备案号',
           value: '京ICP备2025142068号-1',
@@ -1294,6 +1295,7 @@ const baseData = {
           period: 'Enterprise deployment',
           description: 'Designed for production teams and enterprise compliance',
           buttonText: 'Contact for Plan',
+          buttonHref: '#about-contact',
           buttonDisabled: false,
           features: [
             'Multi-member workspace with role-based access control',
@@ -2365,9 +2367,8 @@ const baseData = {
         'We focus on solving complex problems by connecting local agent capabilities, advanced services, enterprise needs, and frontier research into practical solutions.',
       contactTitle: 'Contact Us',
       contacts: [
-        { label: 'Phone', value: '18811753654', href: 'tel:18811753654' },
         { label: 'Personal Email', value: PERSONAL_EMAIL, href: `mailto:${PERSONAL_EMAIL}` },
-        { label: 'LinkedIn', value: 'Stephen Su', href: LINKEDIN_URL, external: true },
+        { label: 'LinkedIn', value: LINKEDIN_DISPLAY, href: LINKEDIN_URL, external: true },
         { label: 'GitHub', value: 'stephensu66', href: GITHUB_URL, external: true }
       ],
       button: 'Contact Us'
@@ -2402,8 +2403,8 @@ const baseData = {
         }
       ],
       companyInfo: [
-        { label: 'Phone', value: '18811753654' },
         { label: 'Personal Email', value: PERSONAL_EMAIL, href: `mailto:${PERSONAL_EMAIL}` },
+        { label: 'LinkedIn', value: LINKEDIN_DISPLAY, href: LINKEDIN_URL },
         {
           label: 'ICP Filing',
           value: '京ICP备2025142068号-1',
@@ -2525,7 +2526,8 @@ const mockData = {
           price: 'Contacter les ventes',
           period: 'Deploiement entreprise',
           description: 'Pour les equipes de production et les exigences de conformite',
-          buttonText: 'Demander une offre'
+          buttonText: 'Demander une offre',
+          buttonHref: '#about-contact'
         }
       ]
     },
@@ -2644,9 +2646,8 @@ const mockData = {
         'Nous connectons les capacites d agents locaux, les services avances, les besoins des entreprises et la recherche de frontiere afin de transformer des problemes complexes en solutions utilisables.',
       contactTitle: 'Nous contacter',
       contacts: [
-        { label: 'Telephone', value: '18811753654', href: 'tel:18811753654' },
         { label: 'Email personnel', value: PERSONAL_EMAIL, href: `mailto:${PERSONAL_EMAIL}` },
-        { label: 'LinkedIn', value: 'Stephen Su', href: LINKEDIN_URL, external: true },
+        { label: 'LinkedIn', value: LINKEDIN_DISPLAY, href: LINKEDIN_URL, external: true },
         { label: 'GitHub', value: 'stephensu66', href: GITHUB_URL, external: true }
       ],
       button: 'Nous contacter'
@@ -2682,8 +2683,8 @@ const mockData = {
         }
       ],
       companyInfo: [
-        { label: 'Telephone', value: '18811753654' },
         { label: 'Email personnel', value: PERSONAL_EMAIL, href: `mailto:${PERSONAL_EMAIL}` },
+        { label: 'LinkedIn', value: LINKEDIN_DISPLAY, href: LINKEDIN_URL },
         {
           label: 'ICP',
           value: '京ICP备2025142068号-1',

@@ -26,9 +26,15 @@ function ServiceSection({ section }) {
 
               <p className="service-desc">{plan.description}</p>
 
-              <button className="service-btn" disabled={plan.buttonDisabled} type="button">
-                {plan.buttonText}
-              </button>
+              {plan.buttonHref && !plan.buttonDisabled ? (
+                <a className="service-btn" href={plan.buttonHref}>
+                  {plan.buttonText}
+                </a>
+              ) : (
+                <button className="service-btn" disabled={plan.buttonDisabled} type="button">
+                  {plan.buttonText}
+                </button>
+              )}
 
               <ul className="service-feature-list">
                 {plan.features.map((feature) => (

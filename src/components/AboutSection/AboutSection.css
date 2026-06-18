@@ -61,7 +61,7 @@
   font-size: 15px;
   color: #334155;
   line-height: 1.5;
-  white-space: nowrap;
+  overflow-wrap: anywhere;
 }
 
 .about-contact-label {
