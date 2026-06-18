@@ -6,6 +6,7 @@ const PERSONAL_EMAIL = 'stephen.su66@gmail.com';
 const LINKEDIN_URL = 'https://www.linkedin.com/in/stephen-su-94674a369/';
 const LINKEDIN_DISPLAY = 'linkedin.com/in/stephen-su-94674a369';
 const GITHUB_URL = 'https://github.com/stephensu66';
+const GITHUB_DISPLAY = 'github.com/stephensu66';
 
 const LANGUAGE_OPTIONS = [
   { value: 'en', label: 'English' },
@@ -1147,7 +1148,7 @@ const baseData = {
       contacts: [
         { label: '个人邮箱', value: PERSONAL_EMAIL, href: `mailto:${PERSONAL_EMAIL}` },
         { label: 'LinkedIn', value: LINKEDIN_DISPLAY, href: LINKEDIN_URL, external: true },
-        { label: 'GitHub', value: 'stephensu66', href: GITHUB_URL, external: true }
+        { label: 'GitHub', value: GITHUB_DISPLAY, href: GITHUB_URL, external: true }
       ],
       button: '联系我们'
     },
@@ -1183,6 +1184,7 @@ const baseData = {
       companyInfo: [
         { label: '个人邮箱', value: PERSONAL_EMAIL, href: `mailto:${PERSONAL_EMAIL}` },
         { label: 'LinkedIn', value: LINKEDIN_DISPLAY, href: LINKEDIN_URL },
+        { label: 'GitHub', value: GITHUB_DISPLAY, href: GITHUB_URL },
         {
           label: 'ICP备案号',
           value: '京ICP备2025142068号-1',
@@ -2369,7 +2371,7 @@ const baseData = {
       contacts: [
         { label: 'Personal Email', value: PERSONAL_EMAIL, href: `mailto:${PERSONAL_EMAIL}` },
         { label: 'LinkedIn', value: LINKEDIN_DISPLAY, href: LINKEDIN_URL, external: true },
-        { label: 'GitHub', value: 'stephensu66', href: GITHUB_URL, external: true }
+        { label: 'GitHub', value: GITHUB_DISPLAY, href: GITHUB_URL, external: true }
       ],
       button: 'Contact Us'
     },
@@ -2405,6 +2407,7 @@ const baseData = {
       companyInfo: [
         { label: 'Personal Email', value: PERSONAL_EMAIL, href: `mailto:${PERSONAL_EMAIL}` },
         { label: 'LinkedIn', value: LINKEDIN_DISPLAY, href: LINKEDIN_URL },
+        { label: 'GitHub', value: GITHUB_DISPLAY, href: GITHUB_URL },
         {
           label: 'ICP Filing',
           value: '京ICP备2025142068号-1',
@@ -2416,7 +2419,7 @@ const baseData = {
         { label: 'LinkedIn', href: LINKEDIN_URL, external: true },
         { label: 'GitHub', href: GITHUB_URL, external: true }
       ],
-      copyright: 'Copyright ©2026 北京超维引力科技有限公司 All Rights Reserved.'
+      copyright: 'Copyright ©2026 HyperGravity All Rights Reserved.'
     }
   }
 };
@@ -2648,7 +2651,7 @@ const mockData = {
       contacts: [
         { label: 'Email personnel', value: PERSONAL_EMAIL, href: `mailto:${PERSONAL_EMAIL}` },
         { label: 'LinkedIn', value: LINKEDIN_DISPLAY, href: LINKEDIN_URL, external: true },
-        { label: 'GitHub', value: 'stephensu66', href: GITHUB_URL, external: true }
+        { label: 'GitHub', value: GITHUB_DISPLAY, href: GITHUB_URL, external: true }
       ],
       button: 'Nous contacter'
     },
@@ -2685,6 +2688,7 @@ const mockData = {
       companyInfo: [
         { label: 'Email personnel', value: PERSONAL_EMAIL, href: `mailto:${PERSONAL_EMAIL}` },
         { label: 'LinkedIn', value: LINKEDIN_DISPLAY, href: LINKEDIN_URL },
+        { label: 'GitHub', value: GITHUB_DISPLAY, href: GITHUB_URL },
         {
           label: 'ICP',
           value: '京ICP备2025142068号-1',
@@ -2696,7 +2700,7 @@ const mockData = {
         { label: 'LinkedIn', href: LINKEDIN_URL, external: true },
         { label: 'GitHub', href: GITHUB_URL, external: true }
       ],
-      copyright: 'Copyright ©2026 北京超维引力科技有限公司. Tous droits reserves.'
+      copyright: 'Copyright ©2026 HyperGravity. Tous droits reserves.'
     }
   }
 };

@@ -4,7 +4,8 @@ const INTEL_DMG =
   'https://github.com/stephensu66/LocalClaw/releases/download/1.0.0/LocalClaw_1.0.0_Intel.dmg';
 
 const CONTACT = {
-  company: '北京超维引力科技有限公司',
+  companyZh: '北京超维引力科技有限公司',
+  companyEn: 'HyperGravity',
   personalEmail: 'stephen.su66@gmail.com',
   linkedin: 'https://www.linkedin.com/in/stephen-su-94674a369/',
   github: 'https://github.com/stephensu66'
@@ -79,7 +80,7 @@ const CONTENT = {
         {
           title: '7. Contact',
           paragraphs: [
-            `Company: ${CONTACT.company}`,
+            `Company: ${CONTACT.companyEn}`,
             `Personal email: ${CONTACT.personalEmail}`,
             `LinkedIn: ${CONTACT.linkedin}`,
             `GitHub: ${CONTACT.github}`
@@ -148,7 +149,7 @@ const CONTENT = {
         {
           title: '7. 联系方式',
           paragraphs: [
-            `公司：${CONTACT.company}`,
+            `公司：${CONTACT.companyZh}`,
             `个人邮箱：${CONTACT.personalEmail}`,
             `LinkedIn：${CONTACT.linkedin}`,
             `GitHub：${CONTACT.github}`
@@ -217,7 +218,7 @@ const CONTENT = {
         {
           title: '7. Contact',
           paragraphs: [
-            `Societe : ${CONTACT.company}`,
+            `Societe : ${CONTACT.companyEn}`,
             `Email personnel : ${CONTACT.personalEmail}`,
             `LinkedIn : ${CONTACT.linkedin}`,
             `GitHub : ${CONTACT.github}`
@@ -290,7 +291,7 @@ const CONTENT = {
         {
           title: '8. Contact',
           paragraphs: [
-            `Company: ${CONTACT.company}`,
+            `Company: ${CONTACT.companyEn}`,
             `Personal email: ${CONTACT.personalEmail}`,
             `LinkedIn: ${CONTACT.linkedin}`,
             `GitHub: ${CONTACT.github}`
@@ -355,7 +356,7 @@ const CONTENT = {
         {
           title: '8. 联系方式',
           paragraphs: [
-            `公司：${CONTACT.company}`,
+            `公司：${CONTACT.companyZh}`,
             `个人邮箱：${CONTACT.personalEmail}`,
             `LinkedIn：${CONTACT.linkedin}`,
             `GitHub：${CONTACT.github}`
@@ -426,7 +427,7 @@ const CONTENT = {
         {
           title: '8. Contact',
           paragraphs: [
-            `Societe : ${CONTACT.company}`,
+            `Societe : ${CONTACT.companyEn}`,
             `Email personnel : ${CONTACT.personalEmail}`,
             `LinkedIn : ${CONTACT.linkedin}`,
             `GitHub : ${CONTACT.github}`
